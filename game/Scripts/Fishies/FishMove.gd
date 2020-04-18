@@ -29,8 +29,10 @@ onready var aqua_height: float = get_parent().HEIGHT
 
 export var fish_types = 2
 
+var current_fish = rand_range(0, fish_types)
+
 func _ready():
-	$Graphics.get_child(rand_range(0, fish_types)).show()
+	$Graphics.get_child(current_fish).show()
 	
 	mix_it_up()
 
@@ -55,6 +57,8 @@ func _process(dt):
 	delta.y = sin(angle) * speed
 
 	move_and_collide(delta)
+	
+	$Graphics.get_child(current_fish).set_animation_speed(speed)
 
 	# 60 is a magic number for fish height
 	position.x = clamp(position.x, 60, aqua_width - 60)
