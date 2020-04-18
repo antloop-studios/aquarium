@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Fishies/FishGraphics/AngryFishGraphic.tscn" type="PackedScene" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Fishies/FishMove.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Fishies/FishGraphics/FancyFishGraphic.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Fishies/FishGraphics/SmallFishGraphic.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 43.2422
@@ -26,10 +27,15 @@ shape = SubResource( 1 )
 
 [node name="Angry" parent="Graphics" instance=ExtResource( 1 )]
 visible = false
-position = Vector2( -96.9797, -67.8211 )
-scale = Vector2( 0.1, 0.1 )
+position = Vector2( -152.662, -130.689 )
+scale = Vector2( 0.188241, 0.188241 )
 
 [node name="Fancy" parent="Graphics" instance=ExtResource( 4 )]
 visible = false
-position = Vector2( -102.983, -73.0459 )
-scale = Vector2( 0.1, 0.1 )
+position = Vector2( -149.086, -105.976 )
+scale = Vector2( 0.142454, 0.142454 )
+
+[node name="Small" parent="Graphics" instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 2.65015, 0.00012207 )
+scale = Vector2( 0.0824526, 0.0824526 )

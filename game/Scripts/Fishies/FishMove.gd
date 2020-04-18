@@ -27,7 +27,7 @@ var next_scramble = 0
 onready var aqua_width: float = get_parent().WIDTH
 onready var aqua_height: float = get_parent().HEIGHT
 
-export var fish_types = 2
+export var fish_types = 3
 
 var current_fish = rand_range(0, fish_types)
 
