@@ -9,7 +9,7 @@
 script = ExtResource( 4 )
 
 [node name="Turtle" type="Polygon2D" parent="."]
-position = Vector2( -169.388, 125.884 )
+position = Vector2( -212.438, -29.5735 )
 scale = Vector2( 1.69064, 1.69064 )
 texture = ExtResource( 1 )
 skeleton = NodePath("../SimpleFishSkeleton")

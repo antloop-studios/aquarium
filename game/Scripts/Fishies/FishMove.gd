@@ -27,7 +27,11 @@ var next_scramble = 0
 onready var aqua_width: float = get_parent().WIDTH
 onready var aqua_height: float = get_parent().HEIGHT
 
+export var fish_types = 2
+
 func _ready():
+	$Graphics.get_child(rand_range(0, fish_types)).show()
+	
 	mix_it_up()
 
 func mix_it_up():
