@@ -67,19 +67,19 @@ bones = [ NodePath("BodyStart"), PoolRealArray( 1, 1, 0.68, 0, 0, 0, 0, 0, 0, 0,
 [node name="SimpleFishSkeleton" type="Skeleton2D" parent="."]
 
 [node name="BodyStart" type="Bone2D" parent="SimpleFishSkeleton"]
-position = Vector2( 340.396, 643.673 )
+position = Vector2( 343.683, 673.251 )
 rest = Transform2D( 1, 0, 0, 1, 154.571, 626.037 )
 
 [node name="BodyEnd" type="Bone2D" parent="SimpleFishSkeleton/BodyStart"]
-position = Vector2( 606.185, -43.7014 )
+position = Vector2( 657.125, -82.3173 )
 rest = Transform2D( 1, 0, 0, 1, 779.158, 0 )
 
 [node name="TailUpper" type="Bone2D" parent="SimpleFishSkeleton"]
-position = Vector2( 1592.24, 480.994 )
+position = Vector2( 1645.64, 461.275 )
 rest = Transform2D( 1, 0, 0, 1, 1548.94, 488.65 )
 
 [node name="TailLower" type="Bone2D" parent="SimpleFishSkeleton/TailUpper"]
-position = Vector2( -2.69188, 373.52 )
+position = Vector2( 6.34589, 411.314 )
 rest = Transform2D( 1, 0, 0, 1, -20.5548, 412.16 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

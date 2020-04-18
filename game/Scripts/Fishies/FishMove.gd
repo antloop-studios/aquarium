@@ -24,6 +24,9 @@ var target_speed = 0
 var clock = 0
 var next_scramble = 0
 
+onready var aqua_width: float = get_parent().WIDTH
+onready var aqua_height: float = get_parent().HEIGHT
+
 func _ready():
 	mix_it_up()
 
@@ -49,13 +52,18 @@ func _process(dt):
 
 	move_and_collide(delta)
 
-	rotation = angle * 0.1
+	# 60 is a magic number for fish height
+	position.x = clamp(position.x, 60, aqua_width - 60)
+	position.y = clamp(position.y, 50, aqua_height - 50)
+
+	if abs(rad2deg(angle)) < 30 and abs(rad2deg(angle)) > -30:
+		rotation = angle * 0.1
 
 	var last_dir = direction
 	direction = delta.x > 0
-	
+
 	if last_dir != direction:
-		get_node("Graphics").scale.x *= -1
+		$Graphics.scale.x *= -1
 
 	# CHECK THE TIME !!
 
