@@ -55,7 +55,7 @@ func _process(dt):
 	direction = delta.x > 0
 	
 	if last_dir != direction:
-		get_node("Sprite").set_flip_h(direction)
+		get_node("Graphics").scale.x *= -1
 
 	# CHECK THE TIME !!
 

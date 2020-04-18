@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Fishies/Fish.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Fishies/FishMove.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Fishies/FancyFishGraphic.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 43.2422
@@ -15,6 +16,7 @@ script = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+visible = false
 position = Vector2( 0.0920105, 0.184021 )
 scale = Vector2( 1.93451, 1 )
 texture = ExtResource( 2 )
@@ -22,3 +24,9 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 rotation = 1.5708
 shape = SubResource( 1 )
+
+[node name="Graphics" type="Node2D" parent="KinematicBody2D"]
+
+[node name="FancyFishGraphic" parent="KinematicBody2D/Graphics" instance=ExtResource( 4 )]
+position = Vector2( -102.669, -71.3547 )
+scale = Vector2( 0.1, 0.1 )
