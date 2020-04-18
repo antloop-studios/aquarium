@@ -9,7 +9,7 @@
 script = ExtResource( 2 )
 
 [node name="Fish3" type="Polygon2D" parent="."]
-position = Vector2( 305.929, 13.5724 )
+position = Vector2( -545.178, -618.242 )
 scale = Vector2( 1.29836, 1.29836 )
 texture = ExtResource( 1 )
 skeleton = NodePath("../SimpleFishSkeleton")
@@ -18,7 +18,26 @@ uv = PoolVector2Array( -19.2982, 477.749, 28.0702, 230.381, 278.947, 118.1, 459.
 bones = [ NodePath("BodyStart"), PoolRealArray( 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ), NodePath("BodyStart/BodyEnd"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0 ), NodePath("TailUpper"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("TailUpper/TailLower"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
 
 [node name="SimpleFishSkeleton" parent="." instance=ExtResource( 4 )]
+position = Vector2( -927.345, -620.454 )
+
+[node name="BodyStart" parent="SimpleFishSkeleton" index="0"]
+position = Vector2( 339.12, 632.188 )
+rest = Transform2D( 1, 0, 0, 1, 339.12, 632.188 )
+
+[node name="BodyEnd" parent="SimpleFishSkeleton/BodyStart" index="0"]
+position = Vector2( 586.406, -28.7077 )
+rest = Transform2D( 1, 0, 0, 1, 586.406, -28.7077 )
+
+[node name="TailUpper" parent="SimpleFishSkeleton" index="1"]
+position = Vector2( 1571.5, 488.65 )
+rest = Transform2D( 1, 0, 0, 1, 1571.5, 488.65 )
+
+[node name="TailLower" parent="SimpleFishSkeleton/TailUpper" index="0"]
+position = Vector2( -6.20105, 358.845 )
+rest = Transform2D( 1, 0, 0, 1, -6.20105, 358.845 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 0.3
 anims/SimpleFishAnimation = ExtResource( 3 )
+
+[editable path="SimpleFishSkeleton"]
