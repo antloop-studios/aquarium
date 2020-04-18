@@ -1,9 +1,6 @@
-extends AnimationPlayer
+extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+export var animation_speed = 0.2
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,8 +8,9 @@ func _ready():
 	start_animation()
 	
 func start_animation():
-	var this:AnimationPlayer = get_node(".")
-	this.play("SimpleFishAnimation")
+	var animation_player:AnimationPlayer = $AnimationPlayer
+	animation_player.play("SimpleFishAnimation")
+	animation_player.playback_speed = animation_speed
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
