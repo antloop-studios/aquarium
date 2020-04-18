@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/Fish3.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/FishGraphic.gd" type="Script" id=2]
+[ext_resource path="res://Animations/SimpleFishAnimation.tres" type="Animation" id=3]
+[ext_resource path="res://Scenes/Fishies/SimpleFishSkeleton.tscn" type="PackedScene" id=4]
+
+[node name="FancyFishGraphic" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Fish3" type="Polygon2D" parent="."]
+position = Vector2( 305.929, 13.5724 )
+scale = Vector2( 1.29836, 1.29836 )
+texture = ExtResource( 1 )
+skeleton = NodePath("../SimpleFishSkeleton")
+polygon = PoolVector2Array( -19.2982, 477.749, 28.0702, 230.381, 278.947, 118.1, 459.649, -36.286, 607.018, -32.7772, 624.561, 105.819, 578.947, 211.082, 691.228, 326.872, 714.035, 430.381, 894.737, 219.854, 1007.02, 179.504, 1052.63, 304.065, 1040.35, 461.96, 957.895, 551.433, 994.737, 711.082, 1012.28, 840.907, 940.351, 867.223, 794.737, 812.837, 701.754, 597.047, 592.982, 716.346, 533.333, 751.433, 621.053, 984.767, 566.667, 1011.08, 436.842, 961.96, 305.263, 795.293, 301.754, 928.626, 245.614, 981.258, 150.877, 858.451, 129.825, 711.082, -7.01752, 570.732 )
+uv = PoolVector2Array( -19.2982, 477.749, 28.0702, 230.381, 278.947, 118.1, 459.649, -36.286, 607.018, -32.7772, 624.561, 105.819, 578.947, 211.082, 691.228, 326.872, 714.035, 430.381, 894.737, 219.854, 1007.02, 179.504, 1052.63, 304.065, 1040.35, 461.96, 957.895, 551.433, 994.737, 711.082, 1012.28, 840.907, 940.351, 867.223, 794.737, 812.837, 701.754, 597.047, 592.982, 716.346, 533.333, 751.433, 621.053, 984.767, 566.667, 1011.08, 436.842, 961.96, 305.263, 795.293, 301.754, 928.626, 245.614, 981.258, 150.877, 858.451, 129.825, 711.082, -7.01752, 570.732 )
+bones = [ NodePath("BodyStart"), PoolRealArray( 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ), NodePath("BodyStart/BodyEnd"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0 ), NodePath("TailUpper"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("TailUpper/TailLower"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+
+[node name="SimpleFishSkeleton" parent="." instance=ExtResource( 4 )]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 0.3
+anims/SimpleFishAnimation = ExtResource( 3 )
