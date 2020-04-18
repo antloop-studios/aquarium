@@ -1,6 +1,6 @@
 extends Node2D
 
-export var animation_speed = 0.2
+export var animation_speed = 0.6
 
 onready var animation_player:AnimationPlayer = $AnimationPlayer
 
@@ -15,6 +15,7 @@ func start_animation():
 
 func set_animation_speed(speed: float):
 	animation_player.playback_speed = speed
+	animation_speed = speed
 	
 func get_animation_speed():
 	return animation_player.playback_speed
