@@ -1,0 +1,19 @@
+[gd_scene format=2]
+
+[node name="SimpleFishSkeleton" type="Skeleton2D"]
+
+[node name="BodyStart" type="Bone2D" parent="."]
+position = Vector2( 341.924, 657.419 )
+rest = Transform2D( 1, 0, 0, 1, 154.571, 626.037 )
+
+[node name="BodyEnd" type="Bone2D" parent="BodyStart"]
+position = Vector2( 629.86, -61.6481 )
+rest = Transform2D( 1, 0, 0, 1, 779.158, 0 )
+
+[node name="TailUpper" type="Bone2D" parent="."]
+position = Vector2( 1617.05, 471.829 )
+rest = Transform2D( 1, 0, 0, 1, 1548.94, 488.65 )
+
+[node name="TailLower" type="Bone2D" parent="TailUpper"]
+position = Vector2( 1.50837, 391.085 )
+rest = Transform2D( 1, 0, 0, 1, -20.5548, 412.16 )

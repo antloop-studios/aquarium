@@ -1,0 +1,53 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "FishBones"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("SimpleFishSkeleton/BodyStart:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 339.12, 632.188 ), Vector2( 347.323, 706.008 ), Vector2( 339.12, 632.188 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SimpleFishSkeleton/BodyStart/BodyEnd:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 586.406, -28.7077 ), Vector2( 713.54, -125.083 ), Vector2( 586.406, -28.7077 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SimpleFishSkeleton/TailUpper:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1571.5, 488.65 ), Vector2( 1704.78, 439.437 ), Vector2( 1571.5, 488.65 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SimpleFishSkeleton/TailUpper/TailLower:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -6.20105, 358.845 ), Vector2( 16.3549, 453.17 ), Vector2( -6.20105, 358.845 ) ]
+}
