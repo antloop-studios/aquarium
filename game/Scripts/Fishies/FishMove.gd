@@ -4,14 +4,17 @@ export var speed: float = 0.5
 export var scramble_interval_min = 10 # seconds
 export var scramble_interval_max = 100 # seconds
 
+export var max_scramble: float = 0.5
 # overclock this piece of shit (nice debug too)
 export var clock_modifier = 10
 
 # max scramble at once
 export var scramble_factor_angle = TAU
-export var scramble_factor_speed = 0.5
+export var scramble_factor_speed = 0.75
 
 export var interpolation_weight = 2
+
+onready var original_speed = speed
 
 # bool for right
 var direction: bool = false
@@ -38,7 +41,13 @@ func _ready():
 
 func mix_it_up():
 	target_angle = angle + rand_range(-scramble_factor_angle, scramble_factor_angle)
-	target_speed = rand_range(speed * scramble_factor_speed, speed + speed * (1 - scramble_factor_speed))
+	var optimus_prime  = rand_range(speed * scramble_factor_speed, speed + speed * (1 - scramble_factor_speed))
+
+	if (original_speed - optimus_prime) / original_speed < max_scramble and optimus_prime < target_speed:
+		target_speed = optimus_prime
+
+	if (original_speed - optimus_prime) / original_speed < max_scramble * 1.5 and optimus_prime > target_speed:
+		target_speed = optimus_prime
 
 func _process(dt):
 	# HANDLE TARGETS
@@ -53,8 +62,8 @@ func _process(dt):
 
 	var delta = Vector2.ZERO
 
-	delta.x = cos(angle) * speed
-	delta.y = sin(angle) * speed
+	delta.x = cos(angle) * speed * dt * 50
+	delta.y = sin(angle) * speed * dt * 50
 
 	move_and_collide(delta)
 	
@@ -82,3 +91,9 @@ func _process(dt):
 		next_scramble = rand_range(scramble_interval_min, scramble_interval_max)
 
 		mix_it_up()
+
+func chase_food():
+	pass
+
+func on_FishFood_food_is_served():
+	print("hey")

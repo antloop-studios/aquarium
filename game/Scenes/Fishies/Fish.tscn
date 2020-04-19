@@ -27,13 +27,13 @@ shape = SubResource( 1 )
 
 [node name="Angry" parent="Graphics" instance=ExtResource( 1 )]
 visible = false
-position = Vector2( -152.662, -130.689 )
-scale = Vector2( 0.188241, 0.188241 )
+position = Vector2( -102.801, -85.2597 )
+scale = Vector2( 0.125, 0.125 )
 
 [node name="Fancy" parent="Graphics" instance=ExtResource( 4 )]
 visible = false
-position = Vector2( -149.086, -105.976 )
-scale = Vector2( 0.142454, 0.142454 )
+position = Vector2( -108.089, -81.5993 )
+scale = Vector2( 0.11, 0.11 )
 
 [node name="Small" parent="Graphics" instance=ExtResource( 5 )]
 visible = false

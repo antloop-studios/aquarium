@@ -21,3 +21,19 @@ scale = Vector2( 0.5, 0.5 )
 [node name="Fish4" parent="." instance=ExtResource( 1 )]
 position = Vector2( 261.411, 342.789 )
 scale = Vector2( 0.5, 0.5 )
+
+[node name="Fish5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 545.426, 236.482 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Fish6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 272.518, 184.122 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Fish7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 442.292, 101.615 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Fish8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 442.292, 101.615 )
+scale = Vector2( 0.5, 0.5 )
