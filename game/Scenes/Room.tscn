@@ -1,0 +1,181 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scenes/Aquarium.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/Wallpaper.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/PlantSpotted3.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/PlantGrass3.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/PlantSpotted2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/PlantSpotted1.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/PlantGrass1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/PlantGrass2.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/RockSmall.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/RockLarge.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/trimmed.png" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 389.913 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 703.472, 10 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Wallpaper" type="Sprite" parent="."]
+position = Vector2( 512.947, 281.608 )
+scale = Vector2( 1.03958, 1.03958 )
+texture = ExtResource( 2 )
+
+[node name="AquariumGraphic" type="Sprite" parent="."]
+position = Vector2( 527.869, 250.568 )
+scale = Vector2( 0.28868, 0.254229 )
+texture = ExtResource( 11 )
+
+[node name="BackgroundPlants" type="Node2D" parent="."]
+position = Vector2( 7.15985, 71.5987 )
+
+[node name="PlantGrass3" type="Sprite" parent="BackgroundPlants"]
+position = Vector2( 566.419, 278.325 )
+scale = Vector2( 0.127339, 0.127339 )
+texture = ExtResource( 4 )
+
+[node name="PlantGrass4" type="Sprite" parent="BackgroundPlants"]
+position = Vector2( 258.454, 239.973 )
+scale = Vector2( 0.173526, 0.166036 )
+texture = ExtResource( 4 )
+
+[node name="PlantGrass2" type="Sprite" parent="BackgroundPlants"]
+position = Vector2( 129.347, 325.73 )
+scale = Vector2( 0.146828, 0.146828 )
+texture = ExtResource( 8 )
+
+[node name="PlantSpotted6" type="Sprite" parent="BackgroundPlants"]
+position = Vector2( 296.706, 366.413 )
+rotation = -3.14159
+scale = Vector2( 0.078, -0.078 )
+texture = ExtResource( 5 )
+
+[node name="PlantSpotted8" type="Sprite" parent="BackgroundPlants"]
+position = Vector2( 503.428, 347.893 )
+rotation = -3.14159
+scale = Vector2( 0.078, -0.078 )
+texture = ExtResource( 5 )
+
+[node name="RockLarge2" type="Sprite" parent="BackgroundPlants"]
+position = Vector2( 460.304, 383.651 )
+scale = Vector2( -0.362799, 0.281352 )
+texture = ExtResource( 10 )
+
+[node name="Aquarium" parent="." instance=ExtResource( 1 )]
+position = Vector2( 7.15985, 71.5987 )
+
+[node name="Fish" parent="Aquarium" index="0"]
+position = Vector2( 583.897, 309.183 )
+
+[node name="Fish2" parent="Aquarium" index="1"]
+position = Vector2( 355.918, 326.637 )
+
+[node name="Fish3" parent="Aquarium" index="2"]
+position = Vector2( 238.425, 189.933 )
+
+[node name="Fish4" parent="Aquarium" index="3"]
+position = Vector2( 151.71, 342.716 )
+
+[node name="Fish5" parent="Aquarium" index="4"]
+position = Vector2( 461.597, 316.599 )
+
+[node name="Fish6" parent="Aquarium" index="5"]
+position = Vector2( 242.081, 268.114 )
+
+[node name="Fish7" parent="Aquarium" index="6"]
+position = Vector2( 438.634, 124.441 )
+
+[node name="Fish8" parent="Aquarium" index="7"]
+position = Vector2( 237.671, 164.518 )
+
+[node name="BorderColliders" type="StaticBody2D" parent="."]
+position = Vector2( 7.15985, 71.5987 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BorderColliders"]
+position = Vector2( 45.6268, 226.498 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="BorderColliders"]
+position = Vector2( 676.098, 236.47 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="BorderColliders"]
+position = Vector2( 366.05, 76.1005 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="BorderColliders"]
+position = Vector2( 366.584, 426.458 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 2 )
+
+[node name="ForegroundPlants" type="Node2D" parent="."]
+position = Vector2( 7.15985, 71.5987 )
+
+[node name="PlantGrass5" type="Sprite" parent="ForegroundPlants"]
+position = Vector2( 399.397, 324.547 )
+scale = Vector2( 0.146828, 0.146828 )
+texture = ExtResource( 8 )
+
+[node name="PlantSpotted1" type="Sprite" parent="ForegroundPlants"]
+position = Vector2( 183.333, 405.641 )
+scale = Vector2( 0.0586017, 0.0586017 )
+texture = ExtResource( 6 )
+
+[node name="PlantSpotted4" type="Sprite" parent="ForegroundPlants"]
+position = Vector2( 108.339, 386.68 )
+scale = Vector2( 0.0586017, 0.0586017 )
+texture = ExtResource( 6 )
+
+[node name="PlantSpotted5" type="Sprite" parent="ForegroundPlants"]
+position = Vector2( 566.531, 403.758 )
+scale = Vector2( 0.0586017, 0.0586017 )
+texture = ExtResource( 6 )
+
+[node name="PlantSpotted2" type="Sprite" parent="ForegroundPlants"]
+position = Vector2( 437.252, 359.238 )
+scale = Vector2( 0.0781961, 0.0781961 )
+texture = ExtResource( 5 )
+
+[node name="PlantSpotted7" type="Sprite" parent="ForegroundPlants"]
+position = Vector2( 164.585, 357.235 )
+scale = Vector2( 0.0781961, 0.0781961 )
+texture = ExtResource( 5 )
+
+[node name="PlantSpotted9" type="Sprite" parent="ForegroundPlants"]
+position = Vector2( 204.316, 299.225 )
+scale = Vector2( 0.0708216, 0.0708216 )
+texture = ExtResource( 3 )
+
+[node name="PlantGrass6" type="Sprite" parent="ForegroundPlants"]
+position = Vector2( 86.9227, 390.274 )
+scale = Vector2( 0.15274, 0.15274 )
+texture = ExtResource( 7 )
+
+[node name="PlantGrass7" type="Sprite" parent="ForegroundPlants"]
+position = Vector2( 339.826, 393.599 )
+scale = Vector2( 0.15274, 0.15274 )
+texture = ExtResource( 7 )
+
+[node name="PlantGrass1" type="Sprite" parent="ForegroundPlants"]
+position = Vector2( 515.902, 394.391 )
+scale = Vector2( 0.15274, 0.15274 )
+texture = ExtResource( 7 )
+
+[node name="RockLarge" type="Sprite" parent="ForegroundPlants"]
+position = Vector2( 635.803, 384.879 )
+scale = Vector2( 0.369425, 0.369425 )
+texture = ExtResource( 10 )
+
+[node name="RockSmall" type="Sprite" parent="ForegroundPlants"]
+position = Vector2( 393.474, 408.107 )
+scale = Vector2( 0.437879, 0.437879 )
+texture = ExtResource( 9 )
+
+[editable path="Aquarium"]
